@@ -116,7 +116,7 @@ def pregunta_04():
     countVectorizer = CountVectorizer(
         analyzer=analyzer,
         lowercase=True,
-        stop_words="english",
+        stop_words='english',
         token_pattern=r"(?u)\b[a-zA-Z][a-zA-Z]+\b",
         binary=True,
         max_df=1.0,
@@ -135,7 +135,7 @@ def pregunta_04():
     # considerar 10 valores entre 0.1 y 1.0 para el parámetro alpha de
     # BernoulliNB.
     param_grid = {
-        "alpha_de_BernoulliNB": np.linspace(0.1, 1, 10),
+        "BernoulliNB__alpha": np.linspace(0.1, 1.0, 10),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
